@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STICKING NAVBAR</title>
+    <meta name="description" content="Resizing header on scroll">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="js/menu.js">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="responsive-bar">
+            <div class="logo">
+                <img src="img/Logo.PNG" alt="">
+            </div>
+            <div class="menu">
+                <h4>Menú </h4>
+            </div>
+        </div>
+        <nav>
+            <div class="logo">
+                <img src="img/Logo.PNG" alt="">
+            </div>
+
+            <ul>
+                <li class="active"><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Portafolio</a></li>
+                <li><a href="">Contact</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="sec1">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/header.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/header.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/header.jpg" alt=""></div>
+
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+
+    <section class="container content">
+        <h1 class="title">Sobre Nosotros</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro officiis minus, eligendi placeat molestiae <br> numquam itaque qui perspiciatis voluptas similique eum ea quaerat accusantium quae enim iusto praesentium rerum. Incidunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro officiis minus, eligendi placeat molestiae <br> numquam itaque qui perspiciatis voluptas similique eum ea quaerat accusantium quae enim iusto praesentium rerum. Incidunt!</p>
+
+        <div class="row content2">
+            <div class="col-sm-6">
+                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Success card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Success card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script type="text/javascript">
+        $(window).on('scroll', function() {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+            } else {
+                $('nav').removeClass('black');
+            }
+        })
+        $(document).ready(function() {
+            $(".menu h4").click(function() {
+                $("nav ul").toggleClass("active")
+            })
+        })
+    </script>
+    <!-- Swiper JS -->
+    <script src="../package/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+</body>
+
+</html>
