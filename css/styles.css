@@ -119,7 +119,7 @@ nav ul li a:hover {
     z-index: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .responsive-bar {
         display: block;
         width: 100%;
