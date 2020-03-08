@@ -119,6 +119,11 @@ nav ul li a:hover {
     z-index: 1;
 }
 
+.icon {
+    background-color: #fff;
+    border-radius: 2px;
+}
+
 @media (max-width: 992px) {
     .responsive-bar {
         display: block;
